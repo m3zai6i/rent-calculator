@@ -26,4 +26,14 @@ python app.py
 
 #
 
+## BILL Discription
+--------------------------------
+
+- 700 water bill `(Divided equally)`
+- 3000 maintenance (lift + outdoor cleaniness + flat) `(Divided equally)`
+- Remaining is electricity bill (most usage Fridge, Gyser) `(Divided equally)`
+- Room1 < (Room2 & HallRoom) Electricity usage is less then other rooms `(Can be verify with Submeter)`
+
+----------------------------------
+
 ### Developed by @Ghost
