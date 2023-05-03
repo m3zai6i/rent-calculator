@@ -1,4 +1,5 @@
 import PySimpleGUI as sg
+import math
 
 # define the layout of the GUI
 layout = [
@@ -10,7 +11,7 @@ layout = [
 ]
 
 # create the window
-window = sg.Window("Rent (FAIR) Distribution", layout)
+window = sg.Window("Rent Distribution", layout)
 
 # start the event loop
 while True:
@@ -43,7 +44,7 @@ while True:
 
         total_rent = person1_share+person2_share+person3_share+person4_share+person5_share+person6_share
 
-        print('------ FAIR DISTRIBUTION ------')
+        print('------ RENT DISTRIBUTION ------')
         print('RENT DIVIDED ON 3 ROOMS')
         print('RESOURCES DIVIDED ON NUMBER OF PERSONS LIVING')
         print('')
@@ -64,11 +65,24 @@ while True:
         print('')
         print('SHAHZAIB = '+str(room_1)+'+'+str(Bill)+'+'+str(Net)+' = '+str(person1_share))
         print('')
-        print('TOTAL =',round(total_rent,1))
+        print('TOTAL =',math.ceil(total_rent))
 
         # update the output label
         output_text = f"Shahzaib: {person1_share:.2f}\nAsad: {person2_share:.2f}\nQadeer: {person3_share:.2f}\nArsalan: {person4_share:.2f}\nUmer: {person5_share:.2f}\nMehbub: {person6_share:.2f}\n\nTotal: {total_rent:.2f}"
         window["-OUTPUT-"].update(output_text)
+
+        print('''
+---------------------------------
+
+BILL Discription:
+
+- 700 water bill (Divided equally)
+- 3000 maintenance (lift + outdoor cleaniness + flat) (Divided equally)
+- Remaining is electricity bill (most usage Fridge, Gyser) (Divided Equally)
+- Room1 < (Room2 & HallRoom) Electricity usage is less then other rooms (Can be verify with Submeter).
+
+----------------------------------
+''')
 
 # close the window
 window.close()
@@ -81,8 +95,8 @@ BILL Discription:
 
 - 700 water bill (Divided equally)
 - 3000 maintenance (lift + outdoor cleaniness + flat) (Divided equally)
-- remaining is electricity bill (most usage Fridge, Gyser) (Divided Equally)
-- Room1 < (Room2 & HallRoom) Electricity usage is less then other rooms.
+- Remaining is electricity bill (most usage Fridge, Gyser) (Divided Equally)
+- Room1 < (Room2 & HallRoom) Electricity usage is less then other rooms (Can be verify with Submeter).
 
 ----------------------------------
 

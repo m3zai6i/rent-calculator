@@ -1,5 +1,11 @@
 # Rent Calculator GUI
 
+
+## Standalone Application
+- Simply Double-Click on `rent_calculator.exe` in Windows
+
+#
+
 ## Install
 
 ```
@@ -11,12 +17,7 @@ pip install -r requirements.txt
 ```
 python app.py
 ```
-#
 
-## Standalone Application
-- Simply Double-Click on `rent_calculator.exe` in Windows
-
-#
 
 ## Layout
 ![](./imgs/1.jpg)
